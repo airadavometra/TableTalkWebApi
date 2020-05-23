@@ -15,11 +15,11 @@ namespace TableTalkWebApplication
 
 		public string GetQuestionsCount()
 		{
-			//return questions.ListOfQuestions.Count();
-			string result = "";
-			foreach (var item in questions.ListOfQuestions)
-				result = result + item;
-			return result;
+			return questions.ListOfQuestions.Count().ToString();
+			//string result = "";
+			//foreach (var item in questions.ListOfQuestions)
+			//	result = result + item;
+			//return result;
 		}
 	}
 }
