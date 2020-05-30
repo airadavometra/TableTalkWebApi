@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using TableTalkWebApplication.Models;
+﻿using TableTalkWebApplication.Models;
 
 namespace TableTalkWebApplication
 {
@@ -8,14 +7,14 @@ namespace TableTalkWebApplication
 		private static QuestionsModel questions = new QuestionsModel();
 		public string GetQuestion(int index)
 		{
-			if (index >= questions.ListOfQuestions.Count())
+			if (index >= questions.ListOfQuestions.Length)
 				return null;
 			return questions.ListOfQuestions[index];
 		}
 
 		public string GetQuestionsCount()
 		{
-			return questions.ListOfQuestions.Count().ToString();
+			return questions.ListOfQuestions.Length.ToString();
 			//string result = "";
 			//foreach (var item in questions.ListOfQuestions)
 			//	result = result + item;
